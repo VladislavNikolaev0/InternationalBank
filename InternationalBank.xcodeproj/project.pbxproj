@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C13F8C892BF32464001B8DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8C882BF32464001B8DEC /* AppDelegate.swift */; };
+		C13F8C8B2BF32464001B8DEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8C8A2BF32464001B8DEC /* SceneDelegate.swift */; };
+		C13F8C8D2BF32464001B8DEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8C8C2BF32464001B8DEC /* ViewController.swift */; };
+		C13F8C922BF32466001B8DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13F8C912BF32466001B8DEC /* Assets.xcassets */; };
+		C13F8C952BF32466001B8DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13F8C932BF32466001B8DEC /* LaunchScreen.storyboard */; };
+		C13F8CA02BF32466001B8DEC /* InternationalBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8C9F2BF32466001B8DEC /* InternationalBankTests.swift */; };
+		C13F8CAA2BF32466001B8DEC /* InternationalBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CA92BF32466001B8DEC /* InternationalBankUITests.swift */; };
+		C13F8CAC2BF32466001B8DEC /* InternationalBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CAB2BF32466001B8DEC /* InternationalBankUITestsLaunchTests.swift */; };
+		C13F8CBB2BF3270B001B8DEC /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CBA2BF3270B001B8DEC /* TabbarController.swift */; };
+		C13F8CBE2BF32FEA001B8DEC /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CBD2BF32FEA001B8DEC /* Resources.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C13F8C9C2BF32466001B8DEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C13F8C7D2BF32464001B8DEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C13F8C842BF32464001B8DEC;
+			remoteInfo = InternationalBank;
+		};
+		C13F8CA62BF32466001B8DEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C13F8C7D2BF32464001B8DEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C13F8C842BF32464001B8DEC;
+			remoteInfo = InternationalBank;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C13F8C852BF32464001B8DEC /* InternationalBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternationalBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13F8C882BF32464001B8DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C13F8C8A2BF32464001B8DEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C13F8C8C2BF32464001B8DEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C13F8C912BF32466001B8DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C13F8C942BF32466001B8DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C13F8C962BF32466001B8DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C13F8C9B2BF32466001B8DEC /* InternationalBankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InternationalBankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13F8C9F2BF32466001B8DEC /* InternationalBankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternationalBankTests.swift; sourceTree = "<group>"; };
+		C13F8CA52BF32466001B8DEC /* InternationalBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InternationalBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13F8CA92BF32466001B8DEC /* InternationalBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternationalBankUITests.swift; sourceTree = "<group>"; };
+		C13F8CAB2BF32466001B8DEC /* InternationalBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternationalBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C13F8CBA2BF3270B001B8DEC /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		C13F8CBD2BF32FEA001B8DEC /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C13F8C822BF32464001B8DEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13F8C982BF32466001B8DEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13F8CA22BF32466001B8DEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C13F8C7C2BF32464001B8DEC = {
+			isa = PBXGroup;
+			children = (
+				C13F8C872BF32464001B8DEC /* InternationalBank */,
+				C13F8C9E2BF32466001B8DEC /* InternationalBankTests */,
+				C13F8CA82BF32466001B8DEC /* InternationalBankUITests */,
+				C13F8C862BF32464001B8DEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C13F8C862BF32464001B8DEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C13F8C852BF32464001B8DEC /* InternationalBank.app */,
+				C13F8C9B2BF32466001B8DEC /* InternationalBankTests.xctest */,
+				C13F8CA52BF32466001B8DEC /* InternationalBankUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C13F8C872BF32464001B8DEC /* InternationalBank */ = {
+			isa = PBXGroup;
+			children = (
+				C13F8CBC2BF327E0001B8DEC /* Helpers */,
+				C13F8CB82BF32544001B8DEC /* Application */,
+				C13F8C8C2BF32464001B8DEC /* ViewController.swift */,
+				C13F8CB92BF32564001B8DEC /* SupportingFiles */,
+				C13F8CBA2BF3270B001B8DEC /* TabbarController.swift */,
+			);
+			path = InternationalBank;
+			sourceTree = "<group>";
+		};
+		C13F8C9E2BF32466001B8DEC /* InternationalBankTests */ = {
+			isa = PBXGroup;
+			children = (
+				C13F8C9F2BF32466001B8DEC /* InternationalBankTests.swift */,
+			);
+			path = InternationalBankTests;
+			sourceTree = "<group>";
+		};
+		C13F8CA82BF32466001B8DEC /* InternationalBankUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C13F8CA92BF32466001B8DEC /* InternationalBankUITests.swift */,
+				C13F8CAB2BF32466001B8DEC /* InternationalBankUITestsLaunchTests.swift */,
+			);
+			path = InternationalBankUITests;
+			sourceTree = "<group>";
+		};
+		C13F8CB82BF32544001B8DEC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C13F8C8A2BF32464001B8DEC /* SceneDelegate.swift */,
+				C13F8C882BF32464001B8DEC /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C13F8CB92BF32564001B8DEC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C13F8C962BF32466001B8DEC /* Info.plist */,
+				C13F8C932BF32466001B8DEC /* LaunchScreen.storyboard */,
+				C13F8C912BF32466001B8DEC /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C13F8CBC2BF327E0001B8DEC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C13F8CBD2BF32FEA001B8DEC /* Resources.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C13F8C842BF32464001B8DEC /* InternationalBank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C13F8CAF2BF32466001B8DEC /* Build configuration list for PBXNativeTarget "InternationalBank" */;
+			buildPhases = (
+				C13F8C812BF32464001B8DEC /* Sources */,
+				C13F8C822BF32464001B8DEC /* Frameworks */,
+				C13F8C832BF32464001B8DEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InternationalBank;
+			productName = InternationalBank;
+			productReference = C13F8C852BF32464001B8DEC /* InternationalBank.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C13F8C9A2BF32466001B8DEC /* InternationalBankTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C13F8CB22BF32466001B8DEC /* Build configuration list for PBXNativeTarget "InternationalBankTests" */;
+			buildPhases = (
+				C13F8C972BF32466001B8DEC /* Sources */,
+				C13F8C982BF32466001B8DEC /* Frameworks */,
+				C13F8C992BF32466001B8DEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C13F8C9D2BF32466001B8DEC /* PBXTargetDependency */,
+			);
+			name = InternationalBankTests;
+			productName = InternationalBankTests;
+			productReference = C13F8C9B2BF32466001B8DEC /* InternationalBankTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C13F8CA42BF32466001B8DEC /* InternationalBankUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C13F8CB52BF32466001B8DEC /* Build configuration list for PBXNativeTarget "InternationalBankUITests" */;
+			buildPhases = (
+				C13F8CA12BF32466001B8DEC /* Sources */,
+				C13F8CA22BF32466001B8DEC /* Frameworks */,
+				C13F8CA32BF32466001B8DEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C13F8CA72BF32466001B8DEC /* PBXTargetDependency */,
+			);
+			name = InternationalBankUITests;
+			productName = InternationalBankUITests;
+			productReference = C13F8CA52BF32466001B8DEC /* InternationalBankUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C13F8C7D2BF32464001B8DEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C13F8C842BF32464001B8DEC = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					C13F8C9A2BF32466001B8DEC = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = C13F8C842BF32464001B8DEC;
+					};
+					C13F8CA42BF32466001B8DEC = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = C13F8C842BF32464001B8DEC;
+					};
+				};
+			};
+			buildConfigurationList = C13F8C802BF32464001B8DEC /* Build configuration list for PBXProject "InternationalBank" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C13F8C7C2BF32464001B8DEC;
+			productRefGroup = C13F8C862BF32464001B8DEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C13F8C842BF32464001B8DEC /* InternationalBank */,
+				C13F8C9A2BF32466001B8DEC /* InternationalBankTests */,
+				C13F8CA42BF32466001B8DEC /* InternationalBankUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C13F8C832BF32464001B8DEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13F8C952BF32466001B8DEC /* LaunchScreen.storyboard in Resources */,
+				C13F8C922BF32466001B8DEC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13F8C992BF32466001B8DEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13F8CA32BF32466001B8DEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C13F8C812BF32464001B8DEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13F8C8D2BF32464001B8DEC /* ViewController.swift in Sources */,
+				C13F8CBB2BF3270B001B8DEC /* TabbarController.swift in Sources */,
+				C13F8C892BF32464001B8DEC /* AppDelegate.swift in Sources */,
+				C13F8CBE2BF32FEA001B8DEC /* Resources.swift in Sources */,
+				C13F8C8B2BF32464001B8DEC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13F8C972BF32466001B8DEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13F8CA02BF32466001B8DEC /* InternationalBankTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13F8CA12BF32466001B8DEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13F8CAA2BF32466001B8DEC /* InternationalBankUITests.swift in Sources */,
+				C13F8CAC2BF32466001B8DEC /* InternationalBankUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C13F8C9D2BF32466001B8DEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C13F8C842BF32464001B8DEC /* InternationalBank */;
+			targetProxy = C13F8C9C2BF32466001B8DEC /* PBXContainerItemProxy */;
+		};
+		C13F8CA72BF32466001B8DEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C13F8C842BF32464001B8DEC /* InternationalBank */;
+			targetProxy = C13F8CA62BF32466001B8DEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C13F8C932BF32466001B8DEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C13F8C942BF32466001B8DEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C13F8CAD2BF32466001B8DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C13F8CAE2BF32466001B8DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C13F8CB02BF32466001B8DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WKFY495324;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InternationalBank/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zxc.InternationalBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C13F8CB12BF32466001B8DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WKFY495324;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InternationalBank/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zxc.InternationalBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C13F8CB32BF32466001B8DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WKFY495324;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zxc.InternationalBankTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InternationalBank.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InternationalBank";
+			};
+			name = Debug;
+		};
+		C13F8CB42BF32466001B8DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WKFY495324;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zxc.InternationalBankTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InternationalBank.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InternationalBank";
+			};
+			name = Release;
+		};
+		C13F8CB62BF32466001B8DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WKFY495324;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zxc.InternationalBankUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InternationalBank;
+			};
+			name = Debug;
+		};
+		C13F8CB72BF32466001B8DEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WKFY495324;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zxc.InternationalBankUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InternationalBank;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C13F8C802BF32464001B8DEC /* Build configuration list for PBXProject "InternationalBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13F8CAD2BF32466001B8DEC /* Debug */,
+				C13F8CAE2BF32466001B8DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C13F8CAF2BF32466001B8DEC /* Build configuration list for PBXNativeTarget "InternationalBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13F8CB02BF32466001B8DEC /* Debug */,
+				C13F8CB12BF32466001B8DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C13F8CB22BF32466001B8DEC /* Build configuration list for PBXNativeTarget "InternationalBankTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13F8CB32BF32466001B8DEC /* Debug */,
+				C13F8CB42BF32466001B8DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C13F8CB52BF32466001B8DEC /* Build configuration list for PBXNativeTarget "InternationalBankUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C13F8CB62BF32466001B8DEC /* Debug */,
+				C13F8CB72BF32466001B8DEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C13F8C7D2BF32464001B8DEC /* Project object */;
+}
