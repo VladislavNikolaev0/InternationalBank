@@ -45,51 +45,51 @@ final class TabbarController: UITabBarController, UITabBarControllerDelegate {
         delegate = self
         tabBar.layer.masksToBounds = true
         
-                
-        let cardController = UIViewController()
-           let transactionController = UIViewController()
-           let mainController = UIViewController()
-           let transfersController = UIViewController()
-           let mailController = UIViewController()
-           
-           let cardNavigation = UINavigationController(rootViewController: cardController)
-           let transactionNavigation = UINavigationController(rootViewController: transactionController)
-           let mainNavigation = UINavigationController(rootViewController: mainController)
-           let transfersNavigation = UINavigationController(rootViewController: transfersController)
-           let mailNavigation = UINavigationController(rootViewController: mailController)
-           
-        cardController.tabBarItem = UITabBarItem(title: nil,
+        
+        let cardController = CardController()
+        let transactionController = TransactionController()
+        let mainController = MainController()
+        let transfersController = TransfersController()
+        let mailController = MailController()
+        
+        let cardNavigation = NavBarController(rootViewController: cardController)
+        let transactionNavigation = NavBarController(rootViewController: transactionController)
+        let mainNavigation = NavBarController(rootViewController: mainController)
+        let transfersNavigation = NavBarController(rootViewController: transfersController)
+        let mailNavigation = NavBarController(rootViewController: mailController)
+        
+        cardNavigation.tabBarItem = UITabBarItem(title: nil,
                                                  image: Resources.Image.Card.tabImage?.withRenderingMode(.alwaysOriginal),
                                                  tag: Tabs.cards.rawValue)
-        cardController.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
+        cardNavigation.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
         
-        transactionController.tabBarItem = UITabBarItem(title: nil,
+        transactionNavigation.tabBarItem = UITabBarItem(title: nil,
                                                         image: Resources.Image.Transaction.tabImage?.withRenderingMode(.alwaysOriginal),
                                                         tag: Tabs.transaction.rawValue)
-        transactionController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        transactionNavigation.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         
-        mainController.tabBarItem = UITabBarItem(title: nil,
+        mainNavigation.tabBarItem = UITabBarItem(title: nil,
                                                  image: Resources.Image.Main.tabImage?.withRenderingMode(.alwaysOriginal),
                                                  tag: Tabs.main.rawValue)
-        mainController.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
+        mainNavigation.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
         
-        transfersController.tabBarItem = UITabBarItem(title: nil,
+        transfersNavigation.tabBarItem = UITabBarItem(title: nil,
                                                       image: Resources.Image.Transfers.tabImage?.withRenderingMode(.alwaysOriginal),
                                                       tag: Tabs.transfers.rawValue)
-        transfersController.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
+        transfersNavigation.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
         
-        mailController.tabBarItem = UITabBarItem(title: nil,
+        mailNavigation.tabBarItem = UITabBarItem(title: nil,
                                                  image: Resources.Image.Mail.tabImage?.withRenderingMode(.alwaysOriginal),
                                                  tag: Tabs.mail.rawValue)
-        mailController.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
+        mailNavigation.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
         
         
         setViewControllers([
-            cardController,
-            transactionController,
-            mainController,
-            transfersController,
-            mailController
+            cardNavigation,
+            transactionNavigation,
+            mainNavigation,
+            transfersNavigation,
+            mailNavigation,
         ], animated: false)
         
         setupSelector()
@@ -100,19 +100,29 @@ final class TabbarController: UITabBarController, UITabBarControllerDelegate {
     // MARK: Selector - circle
     private func updateSelector(animated: Bool) {
         
-        let selectedIndex = self.selectedIndex
-        guard tabBar.items != nil else { return }
+        guard let tabBarItems = tabBar.items else { return }
         
-        let tabBarButtons = tabBar.subviews.filter { $0 is UIControl }
+        var tabBarButtons: [UIView] = []
+        for item in tabBarItems {
+            
+            if let view = item.value(forKey: "view") as? UIView  {
+                tabBarButtons.append(view)
+            }
+        }
+        
+        let selectedIndex = self.selectedIndex
         let selectedButton = tabBarButtons[selectedIndex]
-        print(selectedIndex)
         var center = selectedButton.center
         center.y += 2
         
         if tabBarButtons[2] == selectedButton {
+            
             selectionIndicator.bounds.size = CGSize(width: 53, height: 53)
+            
         } else {
+            
             selectionIndicator.bounds.size = CGSize(width: 47, height: 47)
+            
         }
         
         if animated {
@@ -120,8 +130,11 @@ final class TabbarController: UITabBarController, UITabBarControllerDelegate {
             UIView.animate(withDuration: 0.3) {
                 self.selectionIndicator.center = center
             }
+            
         } else {
+            
             self.selectionIndicator.center = center
+            
         }
         
     }

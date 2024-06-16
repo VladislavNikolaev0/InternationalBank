@@ -17,6 +17,33 @@
 		C13F8CAC2BF32466001B8DEC /* InternationalBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CAB2BF32466001B8DEC /* InternationalBankUITestsLaunchTests.swift */; };
 		C13F8CBB2BF3270B001B8DEC /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CBA2BF3270B001B8DEC /* TabbarController.swift */; };
 		C13F8CBE2BF32FEA001B8DEC /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CBD2BF32FEA001B8DEC /* Resources.swift */; };
+		C13F8CC12BF65F0C001B8DEC /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CC02BF65F0C001B8DEC /* CardController.swift */; };
+		C13F8CC32BF65F24001B8DEC /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CC22BF65F24001B8DEC /* BaseController.swift */; };
+		C13F8CC62BF66230001B8DEC /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CC52BF66230001B8DEC /* UIColor + ext.swift */; };
+		C13F8CC82BF66985001B8DEC /* BaseVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CC72BF66985001B8DEC /* BaseVIew.swift */; };
+		C13F8CCA2BF66A6B001B8DEC /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CC92BF66A6B001B8DEC /* NavBarController.swift */; };
+		C13F8CCD2BF78F30001B8DEC /* MiniCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CCC2BF78F30001B8DEC /* MiniCard.swift */; };
+		C13F8CCF2BF7A195001B8DEC /* UIVIew + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13F8CCE2BF7A195001B8DEC /* UIVIew + ext.swift */; };
+		C1A34FEF2C0CEC2500D808BE /* CardDateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A34FEE2C0CEC2500D808BE /* CardDateTextField.swift */; };
+		C1A34FF12C0CF8F900D808BE /* CardCvvTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A34FF02C0CF8F900D808BE /* CardCvvTextField.swift */; };
+		C1A437622BF7E2B100E37E5F /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A437612BF7E2B100E37E5F /* CardCell.swift */; };
+		C1A437682BF9F73A00E37E5F /* TransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A437672BF9F73A00E37E5F /* TransactionController.swift */; };
+		C1A4376A2BF9F74900E37E5F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A437692BF9F74900E37E5F /* MainController.swift */; };
+		C1A4376C2BF9F75200E37E5F /* TransfersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4376B2BF9F75200E37E5F /* TransfersController.swift */; };
+		C1A4376E2BF9F76800E37E5F /* MailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4376D2BF9F76800E37E5F /* MailController.swift */; };
+		C1A437702BFB532500E37E5F /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4376F2BFB532500E37E5F /* BaseButton.swift */; };
+		C1A437722BFB7B1800E37E5F /* AddCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A437712BFB7B1800E37E5F /* AddCardController.swift */; };
+		C1A437742C035A5400E37E5F /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A437732C035A5400E37E5F /* BaseTextField.swift */; };
+		C1A437762C03602600E37E5F /* ImportCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A437752C03602600E37E5F /* ImportCardController.swift */; };
+		C1A437782C0376AC00E37E5F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A437772C0376AC00E37E5F /* CardView.swift */; };
+		C1A4377A2C04A5AA00E37E5F /* UITextField + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A437792C04A5A900E37E5F /* UITextField + ext.swift */; };
+		C1A4377C2C0760F000E37E5F /* ImportCardFinalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4377B2C0760F000E37E5F /* ImportCardFinalController.swift */; };
+		C1A4377F2C08AF6F00E37E5F /* CardNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A4377E2C08AF6F00E37E5F /* CardNumberTextField.swift */; };
+		C1A437812C08B23300E37E5F /* String + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A437802C08B23300E37E5F /* String + ext.swift */; };
+		C1AE59512C17650300028DE4 /* OrderCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AE59502C17650300028DE4 /* OrderCardController.swift */; };
+		C1AE59532C187C9300028DE4 /* DeliveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AE59522C187C9300028DE4 /* DeliveryController.swift */; };
+		C1AE59552C1F45DF00028DE4 /* OfficeBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AE59542C1F45DF00028DE4 /* OfficeBaseController.swift */; };
+		C1AE59572C1F4D2600028DE4 /* DeliveryFinalContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AE59562C1F4D2600028DE4 /* DeliveryFinalContoller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +78,33 @@
 		C13F8CAB2BF32466001B8DEC /* InternationalBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternationalBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C13F8CBA2BF3270B001B8DEC /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		C13F8CBD2BF32FEA001B8DEC /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		C13F8CC02BF65F0C001B8DEC /* CardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
+		C13F8CC22BF65F24001B8DEC /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		C13F8CC52BF66230001B8DEC /* UIColor + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
+		C13F8CC72BF66985001B8DEC /* BaseVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVIew.swift; sourceTree = "<group>"; };
+		C13F8CC92BF66A6B001B8DEC /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
+		C13F8CCC2BF78F30001B8DEC /* MiniCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCard.swift; sourceTree = "<group>"; };
+		C13F8CCE2BF7A195001B8DEC /* UIVIew + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew + ext.swift"; sourceTree = "<group>"; };
+		C1A34FEE2C0CEC2500D808BE /* CardDateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDateTextField.swift; sourceTree = "<group>"; };
+		C1A34FF02C0CF8F900D808BE /* CardCvvTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCvvTextField.swift; sourceTree = "<group>"; };
+		C1A437612BF7E2B100E37E5F /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		C1A437672BF9F73A00E37E5F /* TransactionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionController.swift; sourceTree = "<group>"; };
+		C1A437692BF9F74900E37E5F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		C1A4376B2BF9F75200E37E5F /* TransfersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersController.swift; sourceTree = "<group>"; };
+		C1A4376D2BF9F76800E37E5F /* MailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailController.swift; sourceTree = "<group>"; };
+		C1A4376F2BFB532500E37E5F /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		C1A437712BFB7B1800E37E5F /* AddCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardController.swift; sourceTree = "<group>"; };
+		C1A437732C035A5400E37E5F /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		C1A437752C03602600E37E5F /* ImportCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportCardController.swift; sourceTree = "<group>"; };
+		C1A437772C0376AC00E37E5F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C1A437792C04A5A900E37E5F /* UITextField + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + ext.swift"; sourceTree = "<group>"; };
+		C1A4377B2C0760F000E37E5F /* ImportCardFinalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportCardFinalController.swift; sourceTree = "<group>"; };
+		C1A4377E2C08AF6F00E37E5F /* CardNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNumberTextField.swift; sourceTree = "<group>"; };
+		C1A437802C08B23300E37E5F /* String + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + ext.swift"; sourceTree = "<group>"; };
+		C1AE59502C17650300028DE4 /* OrderCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCardController.swift; sourceTree = "<group>"; };
+		C1AE59522C187C9300028DE4 /* DeliveryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryController.swift; sourceTree = "<group>"; };
+		C1AE59542C1F45DF00028DE4 /* OfficeBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeBaseController.swift; sourceTree = "<group>"; };
+		C1AE59562C1F4D2600028DE4 /* DeliveryFinalContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryFinalContoller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +156,21 @@
 			isa = PBXGroup;
 			children = (
 				C13F8CBC2BF327E0001B8DEC /* Helpers */,
+				C1A437662BF9F71700E37E5F /* Mail */,
+				C1A437652BF9F70600E37E5F /* Transfers */,
+				C1A437642BF9F6FD00E37E5F /* Main */,
+				C1A437632BF9F6EB00E37E5F /* Transaction */,
+				C13F8CBF2BF65EF2001B8DEC /* Card */,
 				C13F8CB82BF32544001B8DEC /* Application */,
 				C13F8C8C2BF32464001B8DEC /* ViewController.swift */,
 				C13F8CB92BF32564001B8DEC /* SupportingFiles */,
 				C13F8CBA2BF3270B001B8DEC /* TabbarController.swift */,
+				C13F8CC22BF65F24001B8DEC /* BaseController.swift */,
+				C1A4376F2BFB532500E37E5F /* BaseButton.swift */,
+				C1A437732C035A5400E37E5F /* BaseTextField.swift */,
+				C13F8CC92BF66A6B001B8DEC /* NavBarController.swift */,
+				C13F8CC72BF66985001B8DEC /* BaseVIew.swift */,
+				C1AE59542C1F45DF00028DE4 /* OfficeBaseController.swift */,
 			);
 			path = InternationalBank;
 			sourceTree = "<group>";
@@ -149,9 +214,89 @@
 		C13F8CBC2BF327E0001B8DEC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C13F8CC42BF66210001B8DEC /* Extentions */,
 				C13F8CBD2BF32FEA001B8DEC /* Resources.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C13F8CBF2BF65EF2001B8DEC /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4377D2C08AF5400E37E5F /* TextFields */,
+				C13F8CCB2BF69DE3001B8DEC /* Views */,
+				C13F8CC02BF65F0C001B8DEC /* CardController.swift */,
+				C1A437712BFB7B1800E37E5F /* AddCardController.swift */,
+				C1A437752C03602600E37E5F /* ImportCardController.swift */,
+				C1A4377B2C0760F000E37E5F /* ImportCardFinalController.swift */,
+				C1AE59502C17650300028DE4 /* OrderCardController.swift */,
+				C1AE59522C187C9300028DE4 /* DeliveryController.swift */,
+				C1AE59562C1F4D2600028DE4 /* DeliveryFinalContoller.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		C13F8CC42BF66210001B8DEC /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				C13F8CC52BF66230001B8DEC /* UIColor + ext.swift */,
+				C1A437792C04A5A900E37E5F /* UITextField + ext.swift */,
+				C13F8CCE2BF7A195001B8DEC /* UIVIew + ext.swift */,
+				C1A437802C08B23300E37E5F /* String + ext.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		C13F8CCB2BF69DE3001B8DEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C13F8CCC2BF78F30001B8DEC /* MiniCard.swift */,
+				C1A437612BF7E2B100E37E5F /* CardCell.swift */,
+				C1A437772C0376AC00E37E5F /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1A437632BF9F6EB00E37E5F /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				C1A437672BF9F73A00E37E5F /* TransactionController.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		C1A437642BF9F6FD00E37E5F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C1A437692BF9F74900E37E5F /* MainController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C1A437652BF9F70600E37E5F /* Transfers */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4376B2BF9F75200E37E5F /* TransfersController.swift */,
+			);
+			path = Transfers;
+			sourceTree = "<group>";
+		};
+		C1A437662BF9F71700E37E5F /* Mail */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4376D2BF9F76800E37E5F /* MailController.swift */,
+			);
+			path = Mail;
+			sourceTree = "<group>";
+		};
+		C1A4377D2C08AF5400E37E5F /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4377E2C08AF6F00E37E5F /* CardNumberTextField.swift */,
+				C1A34FEE2C0CEC2500D808BE /* CardDateTextField.swift */,
+				C1A34FF02C0CF8F900D808BE /* CardCvvTextField.swift */,
+			);
+			path = TextFields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,10 +430,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				C13F8C8D2BF32464001B8DEC /* ViewController.swift in Sources */,
+				C1A4377A2C04A5AA00E37E5F /* UITextField + ext.swift in Sources */,
+				C13F8CC12BF65F0C001B8DEC /* CardController.swift in Sources */,
+				C1A437742C035A5400E37E5F /* BaseTextField.swift in Sources */,
+				C13F8CC62BF66230001B8DEC /* UIColor + ext.swift in Sources */,
+				C1AE59552C1F45DF00028DE4 /* OfficeBaseController.swift in Sources */,
+				C1A4377C2C0760F000E37E5F /* ImportCardFinalController.swift in Sources */,
+				C13F8CCD2BF78F30001B8DEC /* MiniCard.swift in Sources */,
+				C1A34FF12C0CF8F900D808BE /* CardCvvTextField.swift in Sources */,
+				C1A4376A2BF9F74900E37E5F /* MainController.swift in Sources */,
+				C1AE59512C17650300028DE4 /* OrderCardController.swift in Sources */,
+				C1A34FEF2C0CEC2500D808BE /* CardDateTextField.swift in Sources */,
+				C1A437812C08B23300E37E5F /* String + ext.swift in Sources */,
+				C1A4376C2BF9F75200E37E5F /* TransfersController.swift in Sources */,
+				C13F8CCA2BF66A6B001B8DEC /* NavBarController.swift in Sources */,
+				C13F8CC32BF65F24001B8DEC /* BaseController.swift in Sources */,
+				C1A437762C03602600E37E5F /* ImportCardController.swift in Sources */,
+				C1A437682BF9F73A00E37E5F /* TransactionController.swift in Sources */,
+				C1A437702BFB532500E37E5F /* BaseButton.swift in Sources */,
 				C13F8CBB2BF3270B001B8DEC /* TabbarController.swift in Sources */,
+				C1A437722BFB7B1800E37E5F /* AddCardController.swift in Sources */,
 				C13F8C892BF32464001B8DEC /* AppDelegate.swift in Sources */,
+				C1A4376E2BF9F76800E37E5F /* MailController.swift in Sources */,
+				C1AE59572C1F4D2600028DE4 /* DeliveryFinalContoller.swift in Sources */,
+				C13F8CC82BF66985001B8DEC /* BaseVIew.swift in Sources */,
 				C13F8CBE2BF32FEA001B8DEC /* Resources.swift in Sources */,
+				C13F8CCF2BF7A195001B8DEC /* UIVIew + ext.swift in Sources */,
+				C1A437622BF7E2B100E37E5F /* CardCell.swift in Sources */,
+				C1A437782C0376AC00E37E5F /* CardView.swift in Sources */,
+				C1A4377F2C08AF6F00E37E5F /* CardNumberTextField.swift in Sources */,
 				C13F8C8B2BF32464001B8DEC /* SceneDelegate.swift in Sources */,
+				C1AE59532C187C9300028DE4 /* DeliveryController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
