@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CardCvvTextField: BaseTextField, UITextFieldDelegate {
+final class CardCvvTextField: BaseTextField {
     
     //MARK: - init
     override init(placeholder: String, alignment: AlignmentText = .left) {

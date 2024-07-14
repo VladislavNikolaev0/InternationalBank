@@ -57,8 +57,8 @@ final class BaseToggle: UIControl {
     @objc private func toggleTapped() {
         
         isOn.toggle()
-        
-        storage.set(object: isOn, key: toggleKey)
+
+        storage.set(isOn, key: toggleKey)
         
         updateTogglePosition()
         
@@ -77,7 +77,7 @@ final class BaseToggle: UIControl {
             self.layoutIfNeeded()
             
         }
-    
+
     }
     
 }

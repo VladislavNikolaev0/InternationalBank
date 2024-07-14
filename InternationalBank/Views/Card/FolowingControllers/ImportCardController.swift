@@ -18,7 +18,19 @@ final class ImportCardController: BaseController, ImportCardViewProtocol {
     
     var presenter: ImportCardPresenterProtocol!
     
-    let card = CardView(cardType: .standart, 
+    let scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.showsVerticalScrollIndicator = false
+        return scroll
+    }()
+    
+    let contentView: UIView = {
+        let view = UIView()
+        view.backgroundColor = Resources.Colors.background
+        return view
+    }()
+    
+    let card = CardView(cardType: .standart,
                         cardName: Resources.Strings.Card.walletXYZ,
                         cardNumber: Resources.Strings.Card.secureCardNumber)
     
@@ -136,16 +148,20 @@ extension ImportCardController {
         
         super.setupViews()
         
-        view.addSubview(card)
-        view.addSubview(lableCardName)
-        view.addSubview(cardNameTextField)
-        view.addSubview(lableCardNumber)
-        view.addSubview(cardNumberTextField)
-        view.addSubview(cardDateTextField)
-        view.addSubview(cardCvvTextField)
-        view.addSubview(button)
-        view.addSubview(redCirle)
-        view.addSubview(yellowCirle)
+        view.addSubview(scrollView)
+        
+        scrollView.addSubview(contentView)
+        
+        contentView.addSubview(card)
+        contentView.addSubview(lableCardName)
+        contentView.addSubview(cardNameTextField)
+        contentView.addSubview(lableCardNumber)
+        contentView.addSubview(cardNumberTextField)
+        contentView.addSubview(cardDateTextField)
+        contentView.addSubview(cardCvvTextField)
+        contentView.addSubview(button)
+        contentView.addSubview(redCirle)
+        contentView.addSubview(yellowCirle)
         
     }
     
@@ -153,6 +169,8 @@ extension ImportCardController {
         
         super.setupConstraints()
         
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         card.translatesAutoresizingMaskIntoConstraints = false
         lableCardName.translatesAutoresizingMaskIntoConstraints = false
         cardNameTextField.translatesAutoresizingMaskIntoConstraints = false
@@ -166,38 +184,50 @@ extension ImportCardController {
         
         NSLayoutConstraint.activate([
             
-            card.topAnchor.constraint(equalTo: view.topAnchor, constant: 119 - 28),
-            card.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 91),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
+            
+            card.topAnchor.constraint(equalTo: contentView.topAnchor),
+            card.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
             
             lableCardName.topAnchor.constraint(equalTo: card.bottomAnchor, constant: 49),
-            lableCardName.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+            lableCardName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
             
             cardNameTextField.topAnchor.constraint(equalTo: lableCardName.bottomAnchor, constant: 14),
-            cardNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            cardNameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            cardNameTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
+            cardNameTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
             cardNameTextField.heightAnchor.constraint(equalToConstant: 60),
             
             lableCardNumber.topAnchor.constraint(equalTo: cardNameTextField.bottomAnchor, constant: 28),
-            lableCardNumber.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+            lableCardNumber.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
             
             cardNumberTextField.topAnchor.constraint(equalTo: lableCardNumber.bottomAnchor, constant: 14),
-            cardNumberTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            cardNumberTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            cardNumberTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
+            cardNumberTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
             cardNumberTextField.heightAnchor.constraint(equalToConstant: 60),
             
             cardDateTextField.topAnchor.constraint(equalTo: cardNumberTextField.bottomAnchor, constant: 23),
-            cardDateTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+            cardDateTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
             cardDateTextField.heightAnchor.constraint(equalToConstant: 60),
             cardDateTextField.widthAnchor.constraint(equalToConstant: 150),
             
             cardCvvTextField.topAnchor.constraint(equalTo: cardNumberTextField.bottomAnchor, constant: 23),
-            cardCvvTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            cardCvvTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
             cardCvvTextField.heightAnchor.constraint(equalToConstant: 60),
             cardCvvTextField.widthAnchor.constraint(equalToConstant: 150),
             
             button.topAnchor.constraint(equalTo: cardDateTextField.bottomAnchor, constant: 46),
-            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
+            button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
             button.heightAnchor.constraint(equalToConstant: 41),
             
             redCirle.trailingAnchor.constraint(equalTo: cardNumberTextField.trailingAnchor, constant: -31),

@@ -17,6 +17,18 @@ final class ChoseCardController: BaseController, ChoseCardViewProtocol {
     
     var presenter: ChoseCardPresenterProtocol!
     
+    let scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.showsVerticalScrollIndicator = false
+        return scroll
+    }()
+    
+    let contentView: UIView = {
+        let view = UIView()
+        view.backgroundColor = Resources.Colors.background
+        return view
+    }()
+    
     let card = ChoseCardView(cardType: .standart,
                              name: Resources.Strings.Card.walletXYZ,
                              number: Resources.Strings.Card.numberCardExample,
@@ -181,26 +193,29 @@ extension ChoseCardController {
         
         super.setupViews()
         
-        view.addSubview(card)
-        view.addSubview(activateCardStack)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        
+        contentView.addSubview(card)
+        contentView.addSubview(activateCardStack)
         
         activateCardStack.addArrangedSubview(activateCardLabel)
         activateCardStack.addArrangedSubview(activateCardToggle)
         
-        view.addSubview(changePinButton)
-        view.addSubview(changeCardButton)
-        view.addSubview(onlineShopingStack)
+        contentView.addSubview(changePinButton)
+        contentView.addSubview(changeCardButton)
+        contentView.addSubview(onlineShopingStack)
         
         onlineShopingStack.addArrangedSubview(onlineShopingLable)
         onlineShopingStack.addArrangedSubview(onlineShopingToggle)
         
-        view.addSubview(digitalCardLable)
-        view.addSubview(applePayButton)
-        view.addSubview(limintsLable)
-        view.addSubview(limitDayLable)
-        view.addSubview(limitMonthLable)
-        view.addSubview(dayLable)
-        view.addSubview(monthLable)
+        contentView.addSubview(digitalCardLable)
+        contentView.addSubview(applePayButton)
+        contentView.addSubview(limintsLable)
+        contentView.addSubview(limitDayLable)
+        contentView.addSubview(limitMonthLable)
+        contentView.addSubview(dayLable)
+        contentView.addSubview(monthLable)
         
     }
     
@@ -208,6 +223,8 @@ extension ChoseCardController {
         
         super.setupConstraints()
         
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         card.translatesAutoresizingMaskIntoConstraints = false
         activateCardStack.translatesAutoresizingMaskIntoConstraints = false
         activateCardLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -227,60 +244,72 @@ extension ChoseCardController {
         
         NSLayoutConstraint.activate([
             
-            card.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
-            card.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            card.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 89),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            
+            card.topAnchor.constraint(equalTo: contentView.topAnchor),
+            card.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
+            card.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
             card.heightAnchor.constraint(equalToConstant: 175),
             card.widthAnchor.constraint(equalToConstant: 328),
             
             activateCardStack.topAnchor.constraint(equalTo: card.bottomAnchor, constant: 28),
-            activateCardStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 38),
-            activateCardStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -38),
+            activateCardStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 38),
+            activateCardStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -38),
             activateCardStack.heightAnchor.constraint(equalToConstant: 28),
             
             activateCardToggle.heightAnchor.constraint(equalToConstant: 28),
             activateCardToggle.widthAnchor.constraint(equalToConstant: 52),
             
             changePinButton.topAnchor.constraint(equalTo: activateCardStack.bottomAnchor, constant: 32),
-            changePinButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 38),
-            changePinButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -38),
+            changePinButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 38),
+            changePinButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -38),
             changePinButton.heightAnchor.constraint(equalToConstant: 50),
             
             changeCardButton.topAnchor.constraint(equalTo: changePinButton.bottomAnchor, constant: 15),
-            changeCardButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 38),
-            changeCardButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -38),
+            changeCardButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 38),
+            changeCardButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -38),
             changeCardButton.heightAnchor.constraint(equalToConstant: 50),
             
             onlineShopingStack.topAnchor.constraint(equalTo: changeCardButton.bottomAnchor, constant: 15),
-            onlineShopingStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 38),
-            onlineShopingStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -38),
+            onlineShopingStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 38),
+            onlineShopingStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -38),
             onlineShopingStack.heightAnchor.constraint(equalToConstant: 28),
             
             onlineShopingToggle.heightAnchor.constraint(equalToConstant: 28),
             onlineShopingToggle.widthAnchor.constraint(equalToConstant: 52),
             
             digitalCardLable.topAnchor.constraint(equalTo: onlineShopingStack.bottomAnchor, constant: 25),
-            digitalCardLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 38),
+            digitalCardLable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 38),
             
             applePayButton.topAnchor.constraint(equalTo: digitalCardLable.bottomAnchor, constant: 10),
-            applePayButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 38),
-            applePayButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -38),
+            applePayButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 38),
+            applePayButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -38),
             applePayButton.heightAnchor.constraint(equalToConstant: 50),
             
             limintsLable.topAnchor.constraint(equalTo: applePayButton.bottomAnchor, constant: 20),
-            limintsLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 38),
+            limintsLable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 38),
             
             limitDayLable.topAnchor.constraint(equalTo: limintsLable.bottomAnchor, constant: 15),
-            limitDayLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 38),
+            limitDayLable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 38),
             
             limitMonthLable.topAnchor.constraint(equalTo: limitDayLable.bottomAnchor, constant: 15),
-            limitMonthLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 38),
+            limitMonthLable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 38),
             
             dayLable.topAnchor.constraint(equalTo: limitDayLable.topAnchor),
-            dayLable.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -38),
+            dayLable.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -38),
             
             monthLable.topAnchor.constraint(equalTo: limitMonthLable.topAnchor),
-            monthLable.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -38),
+            monthLable.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -38),
             
         ])
         

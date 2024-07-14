@@ -27,12 +27,13 @@ protocol StorageManagerProtocol {
     
     func codableData<T: Decodable>(key: String) -> T?
     
+    func storeBool(_ value: Bool, key: String)
 }
 
 final class StorageManager {
-
+    
     private let userDefaults = UserDefaults.standard
-
+    
     private func store(_ object: Any?, key: String) {
         
         DispatchQueue.global(qos: .userInteractive).async {
@@ -42,16 +43,30 @@ final class StorageManager {
         }
         
     }
-
+    
     private func restore(key: String) -> Any? {
         
         userDefaults.object(forKey: key)
         
     }
+    
+    
 }
 
 // MARK: - StorageManagerProtocol
 extension StorageManager: StorageManagerProtocol {
+    
+    func storeBool(_ value: Bool, key: String) {
+        
+        userDefaults.set(value, forKey: key)
+        
+    }
+    
+    func restoreBool(key: String) -> Bool? {
+        
+        return userDefaults.bool(forKey: key)
+        
+    }
     
     func set(_ object: Any?, key: String) {
         

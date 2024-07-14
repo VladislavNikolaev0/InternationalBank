@@ -23,7 +23,7 @@ final class TabbarController: UITabBarController, UITabBarControllerDelegate {
     
     private var selectionIndicator: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.orange.withAlphaComponent(0.1)
+        view.backgroundColor = Resources.Gradients.Standart.start.withAlphaComponent(0.06)
         view.bounds.size = CGSize(width: 47, height: 47)
         view.layer.cornerRadius = view.bounds.width / 2
         view.isUserInteractionEnabled = false
@@ -103,7 +103,6 @@ final class TabbarController: UITabBarController, UITabBarControllerDelegate {
                                                  tag: Tabs.mail.rawValue)
         mailNavigation.tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
         
-        
         setViewControllers([
             cardNavigation,
             transactionNavigation,
@@ -131,6 +130,7 @@ final class TabbarController: UITabBarController, UITabBarControllerDelegate {
                 tabBarButtons.append(view)
                 
             }
+            
         }
         
         let selectedIndex = self.selectedIndex

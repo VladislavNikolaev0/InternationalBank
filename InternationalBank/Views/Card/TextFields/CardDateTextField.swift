@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CardDateTextField: BaseTextField, UITextFieldDelegate {
+final class CardDateTextField: BaseTextField {
     
     
     //MARK: - init

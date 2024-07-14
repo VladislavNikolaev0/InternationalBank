@@ -17,6 +17,18 @@ final class DeliveryController: BaseController, DeliveryViewProtocol {
     
     var presenter: DeliveryPresenterProtocol!
     
+    let scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.showsVerticalScrollIndicator = false
+        return scroll
+    }()
+    
+    let contentView: UIView = {
+        let view = UIView()
+        view.backgroundColor = Resources.Colors.background
+        return view
+    }()
+    
     let countryTextField = BaseTextField(placeholder: Resources.Strings.Card.uS)
     
     let addressTextField = BaseTextField(placeholder: Resources.Strings.Card.addressExample)
@@ -133,15 +145,19 @@ extension DeliveryController {
         
         super.setupViews()
         
-        view.addSubview(countryLable)
-        view.addSubview(countryTextField)
-        view.addSubview(addressLable)
-        view.addSubview(addressTextField)
-        view.addSubview(codeLable)
-        view.addSubview(codeTextField)
-        view.addSubview(cityLable)
-        view.addSubview(cityTextField)
-        view.addSubview(button)
+        view.addSubview(scrollView)
+        
+        scrollView.addSubview(contentView)
+        
+        contentView.addSubview(countryLable)
+        contentView.addSubview(countryTextField)
+        contentView.addSubview(addressLable)
+        contentView.addSubview(addressTextField)
+        contentView.addSubview(codeLable)
+        contentView.addSubview(codeTextField)
+        contentView.addSubview(cityLable)
+        contentView.addSubview(cityTextField)
+        contentView.addSubview(button)
         
     }
     
@@ -149,6 +165,8 @@ extension DeliveryController {
         
         super.setupConstraints()
         
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         countryLable.translatesAutoresizingMaskIntoConstraints = false
         countryTextField.translatesAutoresizingMaskIntoConstraints = false
         addressLable.translatesAutoresizingMaskIntoConstraints = false
@@ -161,41 +179,53 @@ extension DeliveryController {
         
         NSLayoutConstraint.activate([
             
-            countryLable.topAnchor.constraint(equalTo: view.topAnchor, constant: 125),
-            countryLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            
+            countryLable.topAnchor.constraint(equalTo: contentView.topAnchor),
+            countryLable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
             
             countryTextField.topAnchor.constraint(equalTo: countryLable.bottomAnchor, constant: 10),
-            countryTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            countryTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            countryTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
+            countryTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
             countryTextField.heightAnchor.constraint(equalToConstant: 55),
             
             addressLable.topAnchor.constraint(equalTo: countryTextField.bottomAnchor, constant: 14),
-            addressLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+            addressLable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
             
             addressTextField.topAnchor.constraint(equalTo: addressLable.bottomAnchor, constant: 10),
-            addressTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            addressTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            addressTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
+            addressTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
             addressTextField.heightAnchor.constraint(equalToConstant: 55),
             
             codeLable.topAnchor.constraint(equalTo: addressTextField.bottomAnchor, constant: 14),
-            codeLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+            codeLable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
             
             codeTextField.topAnchor.constraint(equalTo: codeLable.bottomAnchor, constant: 10),
-            codeTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            codeTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            codeTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
+            codeTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
             codeTextField.heightAnchor.constraint(equalToConstant: 55),
             
             cityLable.topAnchor.constraint(equalTo: codeTextField.bottomAnchor, constant: 14),
-            cityLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+            cityLable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
             
             cityTextField.topAnchor.constraint(equalTo: cityLable.bottomAnchor, constant: 10),
-            cityTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            cityTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            cityTextField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
+            cityTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
             cityTextField.heightAnchor.constraint(equalToConstant: 55),
             
             button.topAnchor.constraint(equalTo: cityTextField.bottomAnchor, constant: 22),
-            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
+            button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
             button.heightAnchor.constraint(equalToConstant: 55),
             
         ])

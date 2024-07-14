@@ -14,7 +14,7 @@ public enum AlignmentText {
     
 }
 
-class BaseTextField: UITextField {
+class BaseTextField: UITextField, UITextFieldDelegate {
     
     var aligmentTextField: AlignmentText = .left
     
@@ -30,6 +30,8 @@ class BaseTextField: UITextField {
         setupConstraints()
         configureApperiens()
         
+        self.delegate = self
+        
     }
     
     required init?(coder: NSCoder) {
@@ -41,6 +43,24 @@ class BaseTextField: UITextField {
         configureApperiens()
         
     }
+    
+    override func didMoveToWindow() {
+        
+        super.didMoveToWindow()
+        
+        if let scrollView = self.superviewOfType(UIScrollView.self) {
+            
+            self.enableAutoScroll(in: scrollView)
+            
+        }
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
 
 //MARK: - ext
